@@ -1,0 +1,37 @@
+server:
+  port: 8889
+
+
+spring:
+  application:
+    name: book-store
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookstore?useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
+    username: root
+    password:
+    test-while-idle: true
+    validation-query: SELECT 1
+    max-wait: 20000
+    max-active: 300
+    test-on-borrow: true
+    platform: mysql
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/bookstore?useSSL=false&zeroDateTimeBehavior=CONVERT_TO_NULL
+      maximum-pool-size: 400
+      idle-timeout: 50000
+      max-lifetime: 2400000
+      connection-timeout: 60000
+      pool-name: mysqlHikariCP
+
+
+
+
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8888/eureka
+#  instance:
+#    preferIpAddress: true
+
